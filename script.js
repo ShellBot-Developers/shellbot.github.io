@@ -22,9 +22,7 @@ document['body'][Nounou('0xa')](footer);
 
 setInterval(() => {
 
-    fetch('https://shellbotpy.raidtheweb.repl.co/servers', {
-      method: 'GET',
-    })
+    fetch('https://shellbotpy.raidtheweb.repl.co/servers'})
     .then(response => response.text())
     .then(data => {
       document.getElementById('guilds-info').innerText = data;
