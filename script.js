@@ -19,7 +19,7 @@ let text = document[Nounou('0x4')](Nounou('0x3'));
 footer[Nounou('0xa')](text);
 document['body'][Nounou('0xa')](footer);
 
-fetch('https://shellbotpy.raidtheweb.repl.co/servers'})
+fetch('https://shellbotpy.raidtheweb.repl.co/servers')
     .then(response => response.text())
     .then(data => {
       document.getElementById('guilds-info').innerText = data;
@@ -28,7 +28,7 @@ fetch('https://shellbotpy.raidtheweb.repl.co/servers'})
       console.error('Error:', error);
     });
 
-fetch('https://shellbotpy.raidtheweb.repl.co/users'})
+fetch('https://shellbotpy.raidtheweb.repl.co/users')
     .then(response => response.text())
     .then(data => {
       document.getElementById('users-info').innerText = data;
@@ -39,7 +39,7 @@ fetch('https://shellbotpy.raidtheweb.repl.co/users'})
 
 setInterval(() => {
 
-    fetch('https://shellbotpy.raidtheweb.repl.co/servers'})
+    fetch('https://shellbotpy.raidtheweb.repl.co/servers')
     .then(response => response.text())
     .then(data => {
       document.getElementById('guilds-info').innerText = data;
@@ -47,7 +47,7 @@ setInterval(() => {
     .catch((error) => {
       console.error('Error:', error);
     });
-    fetch('https://shellbotpy.raidtheweb.repl.co/users'})
+    fetch('https://shellbotpy.raidtheweb.repl.co/users')
     .then(response => response.text())
     .then(data => {
       document.getElementById('users-info').innerText = data;
