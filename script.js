@@ -18,3 +18,19 @@ let footer = document[Nounou('0x6')](Nounou('0x7'));
 let text = document[Nounou('0x4')](Nounou('0x3'));
 footer[Nounou('0xa')](text);
 document['body'][Nounou('0xa')](footer);
+
+
+setInterval(() => {
+
+    fetch('https://shellbotpy.raidtheweb.repl.co/servers', {
+      method: 'GET',
+    })
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('guilds-info').innerText = data;
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
+}, 10000);
