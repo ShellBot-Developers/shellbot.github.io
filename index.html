@@ -78,6 +78,10 @@
         server: '777704120152621076', // ShellBot Community And Support
         channel: '777735256862228482' // #support
       })
+      crate.on('signIn', (user) => {
+        console.log(user)
+        crate.emit('sendMessage', 'Testing')
+      })
     </script>
   </body>
 </html>
