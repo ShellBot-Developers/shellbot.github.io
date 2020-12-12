@@ -42,7 +42,7 @@ fetch('https://shellbotpy.raidtheweb.repl.co/popularcmd')
     .then(data => {
       data = JSON.parse(data);
       data = Object.entries(data);
-      document.getElementById('command-info').innerText = `Name: {data[0][0]}, Times called: {data[0][1]}`;
+      document.getElementById('command-info').innerText = `Name: ${data[0][0]}, Times called: ${data[0][1]}`;
     })
     .catch((error) => {
       console.error('Error:', error);
@@ -72,7 +72,7 @@ setInterval(() => {
     .then(data => {
       data = JSON.parse(data);
       data = Object.entries(data);
-      document.getElementById('command-info').innerText = `Name: {data[0][0]}, Times called: {data[0][1]}`;
+      document.getElementById('command-info').innerText = `Name: ${data[0][0]}, Times called: ${data[0][1]}`;
     })
     .catch((error) => {
       console.error('Error:', error);
