@@ -37,6 +37,17 @@ fetch('https://shellbotpy.raidtheweb.repl.co/users')
       console.error('Error:', error);
     });
 
+fetch('https://shellbotpy.raidtheweb.repl.co/popularcmd')
+    .then(response => response.text())
+    .then(data => {
+      data = JSON.parse(data);
+      data = Object.entries(data);
+      document.getElementById('command-info').innerText = `Name: {data[0][0]}, Times called: {data[0][1]}`;
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
 setInterval(() => {
 
     fetch('https://shellbotpy.raidtheweb.repl.co/servers')
@@ -51,6 +62,17 @@ setInterval(() => {
     .then(response => response.text())
     .then(data => {
       document.getElementById('users-info').innerText = data;
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+    
+    fetch('https://shellbotpy.raidtheweb.repl.co/popularcmd')
+    .then(response => response.text())
+    .then(data => {
+      data = JSON.parse(data);
+      data = Object.entries(data);
+      document.getElementById('command-info').innerText = `Name: {data[0][0]}, Times called: {data[0][1]}`;
     })
     .catch((error) => {
       console.error('Error:', error);
